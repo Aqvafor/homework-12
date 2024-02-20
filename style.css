@@ -1,0 +1,85 @@
+.container {
+  display: block;
+  position: relative;
+  margin: 400px;
+}
+.oval-first {
+  position: absolute;
+  display: inline-block;
+  width: 200px;
+  height: 500px;
+  border: 4px black solid;
+  border-radius: 50%;
+  transform: rotate(60deg);
+  z-index: 1;
+}
+.oval-first::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: yellow;
+  border: 4px black solid;
+  border-radius: 50%;
+  offset-path: path(
+    "M203.5 250C203.5 318.988 192.314 381.422 174.246 426.591C165.212 449.177 154.467 467.421 142.561 480.01C130.656 492.599 117.625 499.5 104 499.5C90.3747 499.5 77.3437 492.599 65.4388 480.01C53.5328 467.421 42.7878 449.177 33.7536 426.591C15.6861 381.422 4.5 318.988 4.5 250C4.5 181.012 15.6861 118.578 33.7536 73.409C42.7878 50.8233 53.5328 32.5793 65.4388 19.9898C77.3437 7.40139 90.3747 0.5 104 0.5C117.625 0.5 130.656 7.40139 142.561 19.9898C154.467 32.5793 165.212 50.8233 174.246 73.409C192.314 118.578 203.5 181.012 203.5 250Z"
+  );
+  animation: move 7s linear infinite;
+  z-index: 3;
+}
+.oval-second {
+  position: absolute;
+
+  display: inline-block;
+  width: 200px;
+  height: 500px;
+  border: 4px black solid;
+  border-radius: 50%;
+  transform: rotate(120deg);
+  z-index: 1;
+}
+.oval-second::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: aqua;
+  border: 4px black solid;
+  border-radius: 50%;
+  offset-path: path(
+    "M203.5 250C203.5 318.988 192.314 381.422 174.246 426.591C165.212 449.177 154.467 467.421 142.561 480.01C130.656 492.599 117.625 499.5 104 499.5C90.3747 499.5 77.3437 492.599 65.4388 480.01C53.5328 467.421 42.7878 449.177 33.7536 426.591C15.6861 381.422 4.5 318.988 4.5 250C4.5 181.012 15.6861 118.578 33.7536 73.409C42.7878 50.8233 53.5328 32.5793 65.4388 19.9898C77.3437 7.40139 90.3747 0.5 104 0.5C117.625 0.5 130.656 7.40139 142.561 19.9898C154.467 32.5793 165.212 50.8233 174.246 73.409C192.314 118.578 203.5 181.012 203.5 250Z"
+  );
+  animation: move 5s linear infinite;
+  z-index: 3;
+}
+.oval-third {
+  position: absolute;
+
+  display: inline-block;
+  width: 200px;
+  height: 500px;
+  border: 4px black solid;
+  border-radius: 50%;
+  transform: rotate(180deg);
+  z-index: 1;
+}
+.ball-3 {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: yellowgreen;
+  border: 4px black solid;
+  border-radius: 50%;
+  offset-path: path(
+    "M203.5 250C203.5 318.988 192.314 381.422 174.246 426.591C165.212 449.177 154.467 467.421 142.561 480.01C130.656 492.599 117.625 499.5 104 499.5C90.3747 499.5 77.3437 492.599 65.4388 480.01C53.5328 467.421 42.7878 449.177 33.7536 426.591C15.6861 381.422 4.5 318.988 4.5 250C4.5 181.012 15.6861 118.578 33.7536 73.409C42.7878 50.8233 53.5328 32.5793 65.4388 19.9898C77.3437 7.40139 90.3747 0.5 104 0.5C117.625 0.5 130.656 7.40139 142.561 19.9898C154.467 32.5793 165.212 50.8233 174.246 73.409C192.314 118.578 203.5 181.012 203.5 250Z"
+  );
+  animation: move 3s linear infinite;
+  z-index: 3;
+}
+
+@keyframes move {
+  100% {
+    offset-distance: 100%;
+  }
+}
